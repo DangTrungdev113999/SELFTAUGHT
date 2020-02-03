@@ -25,10 +25,11 @@ header {
       rgba(28, 62, 255, 0.8)
     ),
     url("../img/background1.jpg");
-  height: 95vh;
+  height: 100vh;
   background-size: cover;
   background-position: top;
   position: relative;
+  clip-path: ellipse(60% 60% at 50% 33%);
 }
 
 .logo-box {
@@ -54,14 +55,14 @@ header {
   margin-bottom: 60px;
 }
 
-.heading-primary_main {
+.heading-primary__main {
   display: block;
   font-size: 62px;
   font-weight: 499;
   letter-spacing: 16px;
 }
 
-.heading-primary_sub {
+.heading-primary__sub {
   display: block;
   font-size: 20px;
   font-weight: 700;
