@@ -80,6 +80,7 @@ header {
   padding: 15px 40px;
   display: inline-block;
   border-radius: 100px;
+  position: relative;
 }
 
 .btn:hover {
@@ -95,4 +96,41 @@ header {
 .btn-white {
   color: #777777;
   background-color: #fff;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+h1 {
+  position: relative;
+  padding-left: 20px;
+}
+h1::before {
+  position: absolute;
+  content: "";
+  padding: 10px;
+  left: 0;
+  top: 8px;
+  border-left: 10px solid green;
+  border-top: 10px solid transparent;
+  border-bottom: 20px solid transparent;
 }
