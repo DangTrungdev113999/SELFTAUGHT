@@ -11,33 +11,45 @@
   padding: 0;
   box-sizing: inherit; }
 
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px); }
+  80% {
+    transform: translateX(-10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px); }
+  80% {
+    transform: translateX(10px); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInbottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 body {
   font-family: "lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
-  line-height: 1.7;
-  box-sizing: border-box; }
-
-/* https://bennettfeely.com/clippy/ */
-.header {
-  background-image: linear-gradient(to right bottom, rgba(90, 115, 252, 0.8), rgba(28, 62, 255, 0.8)), url("../img/background1.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: ellipse(60% 60% at 50% 33%); }
-  .header__logo-box {
-    position: absolute;
-    top: 30px;
-    left: 30px; }
-  .header__logo {
-    height: 70px; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+  line-height: 1.7; }
 
 .heading-primary {
   color: #fff;
@@ -99,33 +111,24 @@ body {
   animation: moveInbottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(100px); }
-  80% {
-    transform: translateX(-10px); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
+.header {
+  background-image: linear-gradient(to right bottom, rgba(90, 115, 252, 0.8), rgba(28, 62, 255, 0.8)), url("../img/background1.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: ellipse(60% 60% at 50% 33%); }
+  .header__logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px; }
+  .header__logo {
+    height: 70px; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(-100px); }
-  80% {
-    transform: translateX(10px); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
-
-@keyframes moveInbottom {
-  0% {
-    opacity: 0;
-    transform: translateY(30px); }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-html {
-  font-size: 62.5%; }
+/* https://bennettfeely.com/clippy/ */
