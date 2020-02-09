@@ -1,0 +1,22 @@
+{
+  "name": "sass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sasstocss": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DangTrungdev113999/landing-page-witdh-sass.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DangTrungdev113999/landing-page-witdh-sass/issues"
+  },
+  "homepage": "https://github.com/DangTrungdev113999/landing-page-witdh-sass#readme",
+  "dependencies": {
+    "node-sass": "^4.13.1"
+  }
+}

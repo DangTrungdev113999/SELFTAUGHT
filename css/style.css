@@ -4,104 +4,74 @@
   medium blue: #5a73fc
   dark blue: #1c3eff
 */
-
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
-}
+  box-sizing: inherit; }
 
 body {
   font-family: "lato", sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 /* https://bennettfeely.com/clippy/ */
 .header {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba(142, 158, 252, 0.8),
-      rgba(28, 62, 255, 0.8)
-    ),
-    url("../img/background1.jpg");
+  background-image: linear-gradient(to right bottom, rgba(90, 115, 252, 0.8), rgba(28, 62, 255, 0.8)), url("../img/background1.jpg");
   height: 100vh;
   background-size: cover;
   background-position: top;
   position: relative;
-  clip-path: ellipse(60% 60% at 50% 33%);
-}
-
-.header__logo-box {
-  position: absolute;
-  top: 30px;
-  left: 30px;
-}
-
-.header__logo {
-  height: 70px;
-}
-
-.header__text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
+  clip-path: ellipse(60% 60% at 50% 33%); }
+  .header__logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px; }
+  .header__logo {
+    height: 70px; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
-  margin-bottom: 60px;
-}
+  margin-bottom: 60px; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6.2rem;
+    font-weight: 499;
+    letter-spacing: 16px;
+    animation: moveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 18px;
+    animation: moveInRight 1s ease-out; }
 
-.heading-primary--main {
-  display: block;
-  font-size: 6.2rem;
-  font-weight: 499;
-  letter-spacing: 16px;
-  animation: moveInLeft 1s ease-out;
-}
-
-.heading-primary--sub {
-  display: block;
-  font-size: 2rem;
-  font-weight: 700;
-  letter-spacing: 18px;
-  animation: moveInRight 1s ease-out;
-}
-
-.btn,
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   text-decoration: uppercase;
   text-decoration: none;
   font-size: 1.6rem;
   padding: 15px 40px;
   display: inline-block;
   border-radius: 100px;
-  position: relative;
-}
+  position: relative; }
 
 .btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
-}
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2); }
 
 .btn:active {
   transform: translateY(-1px);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-}
-
-.btn--white {
-  color: #777777;
-  background-color: #fff;
-}
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); }
 
 .btn::after {
   content: "";
@@ -113,82 +83,49 @@ body {
   top: 0;
   left: 0;
   z-index: -1;
-  transition: all 0.4s;
-}
-
-.btn--white::after {
-  background-color: #fff;
-}
+  transition: all 0.4s; }
 
 .btn:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
-  opacity: 0;
-}
+  opacity: 0; }
 
-h1 {
-  position: relative;
-  padding-left: 20px;
-}
-h1::before {
-  position: absolute;
-  content: "";
-  padding: 10px;
-  left: 0;
-  top: 8px;
-  border-left: 10px solid green;
-  border-top: 10px solid transparent;
-  border-bottom: 20px solid transparent;
-}
+.btn--white {
+  color: #777777;
+  background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn--animated {
   animation: moveInbottom 0.5s ease-out 0.75s;
-  animation-fill-mode: backwards;
-}
+  animation-fill-mode: backwards; }
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(100px);
-  }
-
+    transform: translateX(100px); }
   80% {
-    transform: translateX(-10px);
-  }
-
+    transform: translateX(-10px); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(-100px);
-  }
-
+    transform: translateX(-100px); }
   80% {
-    transform: translateX(10px);
-  }
-
+    transform: translateX(10px); }
   100% {
     opacity: 1;
-    transform: translateX(0);
-  }
-}
+    transform: translateX(0); } }
 
 @keyframes moveInbottom {
   0% {
     opacity: 0;
-    transform: translateY(30px);
-  }
-
+    transform: translateY(30px); }
   100% {
     opacity: 1;
-    transform: translate(0);
-  }
-}
+    transform: translate(0); } }
 
 html {
-  font-size: 62.5%;
-}
+  font-size: 62.5%; }
