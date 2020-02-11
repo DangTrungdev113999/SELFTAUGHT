@@ -5,9 +5,13 @@
   dark blue: #1c3eff
 */
 
+/* https://bennettfeely.com/clippy/ */
+
 @import "./abstracts/variables";
 @import "./base/base";
-@import "./base/animations";
 @import "./base/typography";
 @import "./components/buttons";
-@import "./layout/header";/* https://bennettfeely.com/clippy/ */
+@import "./layout/header";
+@import "./base/animations";
+@import "./layout/grid";
+
