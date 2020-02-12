@@ -8,10 +8,17 @@
 /* https://bennettfeely.com/clippy/ */
 
 @import "./abstracts/variables";
-@import "./base/base";
-@import "./base/typography";
+
 @import "./components/buttons";
-@import "./layout/header";
+@import "./components/composition";
+@import "./components/skill-box";
+
+@import "./base/utilities";
+@import "./base/base";
 @import "./base/animations";
+@import "./base/typography";
+
+@import "./layout/header";
 @import "./layout/grid";
 
+@import "./pages/home";

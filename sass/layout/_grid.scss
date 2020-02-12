@@ -4,14 +4,12 @@
   @include clearfix;
   max-width: $gird-width;
   margin: 0 auto;
-  background-color: $color-primary-light;
 
   &:not(:last-child) {
     margin-bottom: 8rem;
   }
 
   [class^="col-"] {
-    background-color: yellow;
     float: left;
 
     &:not(:last-child) {

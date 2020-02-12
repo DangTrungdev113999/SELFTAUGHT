@@ -5,42 +5,6 @@
   dark blue: #1c3eff
 */
 /* https://bennettfeely.com/clippy/ */
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%; }
-
-body {
-  box-sizing: border-box; }
-
-body {
-  font-family: "lato", sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7; }
-
-.heading-primary {
-  color: #fff;
-  text-transform: uppercase;
-  margin-bottom: 60px; }
-  .heading-primary--main {
-    display: block;
-    font-size: 6.2rem;
-    font-weight: 499;
-    letter-spacing: 16px;
-    animation: moveInLeft 1s ease-out; }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 18px;
-    animation: moveInRight 1s ease-out; }
-
 .btn:link, .btn:visited {
   text-decoration: uppercase;
   text-decoration: none;
@@ -84,25 +48,89 @@ body {
   animation: moveInbottom 0.5s ease-out 0.75s;
   animation-fill-mode: backwards; }
 
-.header {
-  background-image: linear-gradient(to right bottom, rgba(90, 115, 252, 0.8), rgba(28, 62, 255, 0.8)), url("../img/background1.jpg");
-  height: 100vh;
-  background-size: cover;
-  background-position: top;
-  position: relative;
-  clip-path: ellipse(60% 60% at 50% 33%); }
-  .header__logo-box {
+.btn-text {
+  transition: all 0.2s; }
+  .btn-text:link, .btn-text:visited {
+    font-size: 1.6rem;
+    text-decoration: none;
+    color: #5a73fc;
+    border-bottom: 1px solid #5a73fc;
+    display: inline-block;
+    padding: 0.3rem;
+    font-weight: 700; }
+  .btn-text:hover {
+    background-color: #5a73fc;
+    color: #fff;
+    box-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-0.2rem); }
+  .btn-text:active {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(0); }
+
+.composition {
+  position: relative; }
+  .composition__photo {
+    width: 50%;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+    border-radius: 0.4rem;
     position: absolute;
-    top: 30px;
-    left: 30px; }
-  .header__logo {
-    height: 70px; }
-  .header__text-box {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+    outline-offset: 1rem;
+    transition: all 0.2s;
+    z-index: 10; }
+    .composition__photo--p1 {
+      left: 0;
+      top: -2rem; }
+    .composition__photo--p2 {
+      right: 2rem;
+      top: 2rem; }
+    .composition__photo--p3 {
+      left: 10%;
+      top: 10rem; }
+    .composition__photo:hover {
+      outline: 1.5rem solid #5a73fc;
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.4);
+      transform: scale(1.09);
+      z-index: 20; }
+
+.skill-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 2.5rem 2.5rem 5rem 2.5rem;
+  border-radius: 5rem;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+  transition: all 0.3s; }
+  .skill-box:hover {
+    transform: scale(1.05) translateY(-3rem); }
+  .skill-box__icon {
+    font-size: 6rem;
+    margin-bottom: 1.5rem;
+    display: inline-block;
+    background-image: linear-gradient(to right, #8e9efc, #1c3eff);
+    color: transparent;
+    -webkit-background-clip: text; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
 
 @keyframes moveInLeft {
   0% {
@@ -132,10 +160,77 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
+body {
+  font-family: "lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.7; }
+
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  margin-bottom: 60px; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6.2rem;
+    font-weight: 499;
+    letter-spacing: 16px;
+    animation: moveInLeft 1s ease-out; }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 18px;
+    animation: moveInRight 1s ease-out; }
+
+.heading-secondary {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: 1rem;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #8e9efc, #1c3eff);
+  color: transparent;
+  -webkit-background-clip: text;
+  transition: all 0.2s; }
+  .heading-secondary:hover {
+    transform: skewY(5deg) scale(1.1);
+    text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2); }
+
+.heading-tertiary {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.header {
+  background-image: linear-gradient(to right bottom, rgba(142, 158, 252, 0.8), rgba(28, 62, 255, 0.8)), url("../img/background1.jpg");
+  height: 100vh;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+  clip-path: ellipse(60% 60% at 50% 33%); }
+  .header__logo-box {
+    position: absolute;
+    top: 30px;
+    left: 30px; }
+  .header__logo {
+    height: 70px; }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
 .row {
   max-width: 114rem;
-  margin: 0 auto;
-  background-color: #5a73fc; }
+  margin: 0 auto; }
   .row::after {
     content: "";
     display: table;
@@ -143,7 +238,6 @@ body {
   .row:not(:last-child) {
     margin-bottom: 8rem; }
   .row [class^="col-"] {
-    background-color: yellow;
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
@@ -159,3 +253,16 @@ body {
     width: calc( 2 * ((100% - 3 *6rem) / 4) + 6rem); }
   .row .col-3-of-4 {
     width: calc( 3 * ((100% - 3 *6rem) / 4) + 2 *6rem); }
+
+.about-section {
+  background-color: #f7f7f7;
+  padding: 25rem 0;
+  margin-top: -25rem; }
+
+.skills-section {
+  background-image: linear-gradient(to right bottom, rgba(142, 158, 252, 0.8), rgba(28, 62, 255, 0.8)), url("../../img/background2.jpg");
+  background-size: cover;
+  padding: 20rem 0;
+  margin-top: -20rem;
+  position: relative;
+  clip-path: ellipse(70% 50% at 50% 50%); }
