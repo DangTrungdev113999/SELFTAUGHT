@@ -1,0 +1,16 @@
+.enroll {
+  background-image: radial-gradient(
+      150% 200% ellipse at -15%,
+      rgba($color-white, 0.8) 50%,
+      transparent 50%
+    ),
+    url("../../img/background3.jpg");
+  background-size: cover;
+  border-radius: 5rem;
+  box-shadow: 0px 5rem 7rem rgba($color-black, 0.15);
+  height: 50rem;
+  &__form {
+    padding: 6rem;
+    width: 60%;
+  }
+}
