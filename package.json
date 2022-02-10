@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/DangTrungdev113999/landing-page-witdh-sass#readme",
   "dependencies": {
-    "node-sass": "^4.13.1"
+    "node-sass": "^7.0.0"
   }
 }
